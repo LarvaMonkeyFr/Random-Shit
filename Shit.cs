@@ -3,16 +3,27 @@ using UnityEngine;
 public class Shit : MonoBehaviour
 {
     public bool DoShit = true;
-    
-    public void Start()
+
+    // Changed this to Awake so it runs before other stuff.
+    public void Awake()
     {
         if (DoShit)
         {
-          Debug.Log("Did Shit! :)");
+            DoingTheShit();
+            Debug.Log("Did Shit! :)");
         }
-        else (!DoShit)
+        else
         {
-          Debug.Log("Didn't do shit :(");
+            Debug.Log("Didn't do shit :(");
+        }
+    }
+
+    public void DoingTheShit()
+    {
+    // CRASHHHHHHH
+        while (DoShit)
+        {
+            Debug.Log("SHIT!");
         }
     }
 }
