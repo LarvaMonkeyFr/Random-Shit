@@ -10,21 +10,23 @@ public class PraiseMe : MonoBehaviour
         "You're such a good boy :3",
         "Oh my, keep coding for me :3",
         "Wow, I'm sooo proud of you :3"
+        "Nya~ This game is soo good :3",
+        "HMPH, stop thinking so bad about yourself. I belive in you :3"
     };
 
     public void Start()
     {
         if (praise)
         {
-            int randomIndex = Random.Range(0, PraiseMessages.Count);
+            int RandomMessage = Random.Range(0, PraiseMessages.Count);
 
-            string randomChoice = PraiseMessages[randomIndex];
+            string RandomPraise = PraiseMessages[RandomMessage];
 
-            Debug.Log(randomChoice);
+            Debug.Log(RandomPraise);
         }
         else
         {
-            Debug.Log("ENABLE PRAISE RIGHT FUCKING NOW")
+            Debug.Error("ENABLE PRAISE RIGHT FUCKING NOW")
         }
     }
 }
