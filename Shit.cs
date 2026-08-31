@@ -3,14 +3,15 @@ using UnityEngine;
 public class Shit : MonoBehaviour
 {
     public bool DoShit = true;
+    public bool DidShit = false;
+    public int FinalNumber = 0;
 
-    // Changed this to Awake so it runs before other stuff.
     public void Awake()
     {
         if (DoShit)
         {
             DoingTheShit();
-            Debug.Log("Did Shit! :)");
+            Debug.Log("Doing the Shit...");
         }
         else
         {
@@ -20,10 +21,13 @@ public class Shit : MonoBehaviour
 
     public void DoingTheShit()
     {
-    // CRASHHHHHHH
-        while (DoShit)
+        if (DoShit)
         {
-            Debug.Log("SHIT!");
+            DoShit = false;
+            DidShit = true;
+            FinalNumber = FinalNumber + 1 * 5;
+            Debug.Log("Did Shit! :)");
+            Debug.Log("Btw, the answer is: " + FinalNumber);
         }
     }
 }
