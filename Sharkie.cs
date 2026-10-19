@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Sharkie : MonoBehaviour
 {
-    public transform SharkieObj;
-    public int JiggleIntensity = 1
+    public Transform SharkieObj;
+    public int JiggleIntensity = 1;
 
     public void Start();
     {
